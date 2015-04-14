@@ -104,8 +104,7 @@ namespace Kennen
             var harassKey = Config.Item("harassKey").GetValue<KeyBind>().Active;
             var ultikey = Config.Item("autoR").GetValue<KeyBind>().Active;
             var autozhkey = Config.Item("autozh").GetValue<KeyBind>().Active;
-            var autoW = Config.Item("autoW").GetValue<bool>();
-            var autoQ = Config.Item("autoQ").GetValue<bool>();
+            
 
 
             if (ultikey)
@@ -124,17 +123,17 @@ namespace Kennen
                 if (target == null || !target.IsValidTarget()) ;
                 return;
 
-                if (autoQ && Q.IsReady() && Q.IsInRange(target))
+                if (Q.IsReady() && target.IsValidTarget(Q.Range) && Config.Item("autoQ").GetValue<KeyBind>().Active)
+
                 {
-                    Q.Cast();
-                    CastBasicSkillShot(Q, Q.Range, TargetSelector.DamageType.Magical, HitChance.High);
-                }
+                       W.Cast();
+                     CastBasicSkillShot(Q, Q.Range, TargetSelector.DamageType.Magical, HitChance.High);
+                     }
                     
+                
 
-                if (target == null || !target.IsValidTarget()) ;
-                return;
 
-                if (autoW && W.IsReady() && W.IsInRange(target))
+                if (W.IsReady() && target.IsValidTarget(W.Range) && Config.Item("autoW").GetValue<KeyBind>().Active)
                 {
                     W.Cast();
                 }
