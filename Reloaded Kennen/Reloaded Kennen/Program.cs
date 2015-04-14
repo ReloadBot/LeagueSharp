@@ -126,7 +126,7 @@ namespace Kennen
                 if (Q.IsReady() && target.IsValidTarget(Q.Range) && Config.Item("autoQ").GetValue<KeyBind>().Active)
 
                 {
-                       W.Cast();
+                       Q.Cast();
                      CastBasicSkillShot(Q, Q.Range, TargetSelector.DamageType.Magical, HitChance.High);
                      }
                     
