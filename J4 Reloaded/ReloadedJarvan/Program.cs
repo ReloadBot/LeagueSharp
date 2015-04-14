@@ -96,7 +96,7 @@ namespace StonedJarvan
             //Obj_AI_Hero.OnCreate += OnCreateObj;
             //Obj_AI_Hero.OnDelete += OnDeleteObj;
 
-            Game.PrintChat("<font color='#FF00BF'>Stoned Jarvan Loaded By</font> <font color='#FF0000'>The</font><font color='#FFFF00'>Kush</font><font color='#40FF00'>Style</font>");
+            Game.PrintChat("<font color='#000080'>J4Reloaded By</font> <font color='#B22222'>ReloadBot</font>");
         }
 
         /* WIP
