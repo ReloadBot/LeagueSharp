@@ -89,7 +89,7 @@ namespace LightningRyze
             Config.SubMenu("Extra").AddItem(new MenuItem("YasuoWall", "Don't use skillshots on Yasuo's Wall").SetValue(true));
             Config.SubMenu("Extra").AddItem(new MenuItem("WInterrupt", "Interrupt spells W").SetValue(true));
             Config.SubMenu("Extra").AddItem(new MenuItem("WGap", "W on GapCloser").SetValue(true));
-            // Config.SubMenu("Extra").AddItem(new MenuItem("UsePacket", "Packet Cast").SetValue(true));
+            /* Config.SubMenu("Extra").AddItem(new MenuItem("UsePacket", "Packet Cast").SetValue(true));*/
 
             Config.AddSubMenu(new Menu("Drawings", "Drawings"));
             Config.SubMenu("Drawings").AddItem(new MenuItem("QRange", "Q range").SetValue(new Circle(true, Color.FromArgb(255, 255, 255, 255))));
