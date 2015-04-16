@@ -120,10 +120,11 @@ namespace Kennen
                 if (harassKey && target != null)
                     Harass(target);
 
-                if (target == null || !target.IsValidTarget()) ;
+                if (target == null || !target.IsValidTarget())
                 return;
 
                 if (Q.IsReady() && target.IsValidTarget(Q.Range) && Config.Item("autoQ").GetValue<KeyBind>().Active)
+                    return;
 
                 {
                        Q.Cast();
