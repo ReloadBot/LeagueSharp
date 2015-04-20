@@ -12,7 +12,7 @@ namespace LightningRyze
 {
     internal class Program
     {
-        public static readonly List<Spell> SpellList= new List<Spell>();
+        public static readonly List<Spell> _SpellList= new List<Spell>();
         private static Menu Config;
         private static Orbwalking.Orbwalker Orbwalker;
         private static Obj_AI_Hero Target;
@@ -23,11 +23,6 @@ namespace LightningRyze
         private static int WallCastT;
         private static Vector2 YasuoWallCastedPos;
         private static GameObject YasuoWall;
-
-        SpellList.Add(Q);
-        SpellList.Add(W);
-        SpellList.Add(E);
-        SpellList.Add(R);
         
         private static void Main(string[] args)
         {
@@ -39,6 +34,11 @@ namespace LightningRyze
             Player = ObjectManager.Player;
 
             if (Player.ChampionName != "Ryze") return;
+            
+            _SpellList.Add(Q);
+            _SpellList.Add(W);
+            _SpellList.Add(E);
+            _SpellList.Add(R);
 
             Q = new Spell(SpellSlot.Q, 625);
             W = new Spell(SpellSlot.W, 600);
