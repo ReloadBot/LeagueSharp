@@ -12,14 +12,11 @@ namespace LightningRyze
 {
     internal class Program
     {
+        public static readonly List<Spell> SpellList= new List<Spell>();
         private static Menu Config;
         private static Orbwalking.Orbwalker Orbwalker;
         private static Obj_AI_Hero Target;
         private static Obj_AI_Hero Player;
-        private static Spell Q;
-        private static Spell W;
-        private static Spell E;
-        private static Spell R;
         private static SpellSlot IgniteSlot;
         private static string LastCast;
         private static float LastFlashTime;
@@ -27,6 +24,11 @@ namespace LightningRyze
         private static Vector2 YasuoWallCastedPos;
         private static GameObject YasuoWall;
 
+        SpellList.Add(Q);
+        SpellList.Add(W);
+        SpellList.Add(E);
+        SpellList.Add(R);
+        
         private static void Main(string[] args)
         {
             CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
