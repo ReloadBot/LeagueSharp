@@ -47,7 +47,7 @@ namespace LightningRyze
 
             IgniteSlot = Player.GetSpellSlot("SummonerDot");
 
-            Config = new Menu("Lightning Ryze", "Lightning Ryze", true);
+            Config = new Menu("Reloaded Ryze", "Reloaded Ryze", true);
 
             var targetSelectorMenu = new Menu("Target Selector", "Target Selector");
             TargetSelector.AddToMenu(targetSelectorMenu);
